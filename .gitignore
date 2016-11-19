@@ -1,0 +1,5 @@
+# Daedalus Git Ignore
+
+# Build Files
+build/
+

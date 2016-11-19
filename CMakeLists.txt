@@ -1,7 +1,6 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required(VERSION 3.4)
 
-project (Daedalus)
+project(Daedalus)
 
+add_subdirectory(source)
 
-
-add_executable (Daedalus source/HelloWorld.cpp)

@@ -1,5 +1,7 @@
 # Daedalus Git Ignore
 
 # Build Files
-build/
+binaries/
+libraries/
+target/
 

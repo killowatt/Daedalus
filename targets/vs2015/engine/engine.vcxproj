@@ -10,6 +10,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\engine\Main.cpp" />
+    <ClCompile Include="..\..\..\source\engine\Platform\Windows\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\engine\Platform\Windows\Window.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4149008D-B58D-46FA-8FA6-EAAA9B5AE6CA}</ProjectGuid>
     <RootNamespace>engine</RootNamespace>
@@ -42,12 +49,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)binaries</OutDir>
+    <OutDir>$(SolutionDir)binaries\</OutDir>
     <IntDir>$(SolutionDir)temp\vs2015\</IntDir>
     <TargetName>$(ProjectName)_$(Platform)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)binaries</OutDir>
+    <OutDir>$(SolutionDir)binaries\</OutDir>
     <IntDir>$(SolutionDir)temp\vs2015\</IntDir>
     <TargetName>$(ProjectName)_$(Platform)</TargetName>
   </PropertyGroup>
@@ -71,9 +78,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\source\engine\Main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

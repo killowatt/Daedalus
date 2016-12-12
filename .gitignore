@@ -2,6 +2,17 @@
 
 # Build Files
 binaries/
-libraries/
-target/
+temp/
 
+# Misc Files
+*.sdf
+*.opensdf
+*.opendb
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# NSight User Files
+*.nvuser

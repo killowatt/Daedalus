@@ -18,5 +18,6 @@
     <ClInclude Include="..\..\..\source\engine\Platform\Windows\Window.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="Core.h" />
   </ItemGroup>
 </Project>

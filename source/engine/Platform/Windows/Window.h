@@ -5,5 +5,10 @@
 class Window
 {
 public:
+	HINSTANCE Instance;
+	HWND Handle;
+
 	void DoStuff();
+
+	Window();
 };

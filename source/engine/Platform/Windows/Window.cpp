@@ -1,6 +1,11 @@
-#include "Window.h"
+﻿#include "Window.h"
 
 #include <iostream>
+
+Window::Window()
+{
+	Instance = GetModuleHandle(0);
+}
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -20,29 +25,31 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 void Window::DoStuff()
 {
 	WNDCLASSEX wc;
+		
 
 	HINSTANCE hInstance = GetModuleHandle(0);
+
+	ZeroMemory(&wc, sizeof(WNDCLASSEX));
 
 	wc.cbSize = sizeof(WNDCLASSEX);
 	wc.style = CS_HREDRAW | CS_VREDRAW;
 	wc.lpfnWndProc = WndProc;
-	wc.cbClsExtra = 0;
-	wc.cbWndExtra = 0;
 	wc.hInstance = hInstance;
-	wc.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_APPLICATION));
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wc.hbrBackground = (HBRUSH)(COLOR_WINDOW - 4);
-	wc.lpszMenuName = NULL;
-	wc.lpszClassName = "Daedalus";
-	wc.hIconSm = LoadIcon(wc.hInstance, MAKEINTRESOURCE(IDI_APPLICATION));
+	wc.lpszClassName = L"Daedalus";
 
 	if (!RegisterClassEx(&wc))
 	{
-		MessageBox(NULL, "RegisterClassEx failed.", "Failure",
+		MessageBox(NULL, L"RegisterClassEx failed.", L"Failure",
 			NULL);
 
 		return;
 	}
+
+	const char xyz[] = u8"Daedalus 你好";
+	std::cout << xyz;
+	std::cout << strlen("Daedalus 你好");
 
 	// The parameters to CreateWindow explained:  
 	// szWindowClass: the name of the application  
@@ -54,9 +61,14 @@ void Window::DoStuff()
 	// NULL: this application does not have a menu bar  
 	// hInstance: the first parameter from WinMain  
 	// NULL: not used in this application  
+
+	int vv = MultiByteToWideChar(CP_UTF8, 0, xyz, -1, nullptr, 0);
+	wchar_t* namez = new wchar_t[vv];
+	MultiByteToWideChar(CP_UTF8, 0, xyz, -1, namez, vv);
+
 	HWND hWnd = CreateWindow(
-		"Daedalus",
-		"Daedalus Title",
+		L"Daedalus",
+		namez,
 		WS_OVERLAPPEDWINDOW ^ WS_THICKFRAME ^ WS_MAXIMIZEBOX,
 		CW_USEDEFAULT, CW_USEDEFAULT,
 		1024, 576,
@@ -68,7 +80,7 @@ void Window::DoStuff()
 
 	if (!hWnd)
 	{
-		MessageBox(NULL, "Creatwindow failed", "Wow",
+		MessageBox(NULL, L"Creatwindow failed", L"Wow",
 			NULL);
 
 		return;

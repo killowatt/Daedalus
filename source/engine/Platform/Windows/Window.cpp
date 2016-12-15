@@ -31,7 +31,7 @@ void Window::DoStuff()
 	wc.hInstance = hInstance;
 	wc.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_APPLICATION));
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
-	wc.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+	wc.hbrBackground = (HBRUSH)(COLOR_WINDOW - 4);
 	wc.lpszMenuName = NULL;
 	wc.lpszClassName = "Daedalus";
 	wc.hIconSm = LoadIcon(wc.hInstance, MAKEINTRESOURCE(IDI_APPLICATION));
@@ -57,7 +57,7 @@ void Window::DoStuff()
 	HWND hWnd = CreateWindow(
 		"Daedalus",
 		"Daedalus Title",
-		WS_OVERLAPPEDWINDOW,
+		WS_OVERLAPPEDWINDOW ^ WS_THICKFRAME ^ WS_MAXIMIZEBOX,
 		CW_USEDEFAULT, CW_USEDEFAULT,
 		1024, 576,
 		NULL,

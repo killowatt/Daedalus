@@ -13,11 +13,14 @@
     <ClCompile Include="..\..\..\source\engine\Platform\Windows\Window.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\engine\DaedalusGL.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\engine\Platform\Windows\Window.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
-    <ClInclude Include="Core.h" />
+    <ClInclude Include="..\..\..\source\engine\Core.h" />
+    <ClInclude Include="..\..\..\source\engine\tempGLext.h" />
+    <ClInclude Include="..\..\..\source\engine\DaedalusGL.h" />
   </ItemGroup>
 </Project>

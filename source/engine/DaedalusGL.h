@@ -7,6 +7,27 @@
 
 #include "tempGLext.h"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Generated
 PFNGLDRAWRANGEELEMENTSPROC glDrawRangeElements;
 PFNGLTEXIMAGE3DPROC glTexImage3D;
 PFNGLTEXSUBIMAGE3DPROC glTexSubImage3D;

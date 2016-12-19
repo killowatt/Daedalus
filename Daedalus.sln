@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "engine", "targets\vs2015\engine\engine.vcxproj", "{4149008D-B58D-46FA-8FA6-EAAA9B5AE6CA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "renderer", "targets\vs2015\engine\renderer.vcxproj", "{554299EE-6A1C-4329-BFFD-6FA053AA7CBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4149008D-B58D-46FA-8FA6-EAAA9B5AE6CA}.Debug|x64.Build.0 = Debug|x64
 		{4149008D-B58D-46FA-8FA6-EAAA9B5AE6CA}.Release|x64.ActiveCfg = Release|x64
 		{4149008D-B58D-46FA-8FA6-EAAA9B5AE6CA}.Release|x64.Build.0 = Release|x64
+		{554299EE-6A1C-4329-BFFD-6FA053AA7CBD}.Debug|x64.ActiveCfg = Debug|x64
+		{554299EE-6A1C-4329-BFFD-6FA053AA7CBD}.Debug|x64.Build.0 = Debug|x64
+		{554299EE-6A1C-4329-BFFD-6FA053AA7CBD}.Release|x64.ActiveCfg = Release|x64
+		{554299EE-6A1C-4329-BFFD-6FA053AA7CBD}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

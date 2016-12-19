@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GL">
+      <UniqueIdentifier>{2c339349-fa6f-4c48-8ec1-f1af7b536f1c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\renderer\GL\GLDefinitions.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\renderer\GL\DaedalusGL.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\renderer\GL\DaedalusGL.cpp">
+      <Filter>GL</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

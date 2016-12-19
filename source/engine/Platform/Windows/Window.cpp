@@ -2,9 +2,6 @@
 
 #include <iostream>
 
-#include <gl/GL.h>
-#include "../../tempGLext.h"
-
 Window::Window()
 {
 	Instance = GetModuleHandle(0);
@@ -39,6 +36,11 @@ void *GetAnyGLFuncAddress(const char *name)
 	return p;
 }
 
+
+void* GetFuncLol(const char* str)
+{
+	return wglGetProcAddress(str);
+}
 
 void Window::DoStuff()
 {
@@ -154,9 +156,6 @@ void Window::DoStuff()
 	wglMakeCurrent(device, Context);
 
 	//MessageBoxA(0, (char*)glGetString(GL_VERSION), "OPENGL VERSION", 0);
-
-	PFNGLGETSTRINGIPROC glGetStringi = (PFNGLGETSTRINGIPROC)wglGetProcAddress("glGetStringi");
-
 
 
 

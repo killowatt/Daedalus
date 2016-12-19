@@ -11,15 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\engine\DaedalusGL.cpp" />
     <ClCompile Include="..\..\..\source\engine\Main.cpp" />
     <ClCompile Include="..\..\..\source\engine\Platform\Windows\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\engine\Core.h" />
-    <ClInclude Include="..\..\..\source\engine\DaedalusGL.h" />
     <ClInclude Include="..\..\..\source\engine\Platform\Windows\Window.h" />
-    <ClInclude Include="..\..\..\source\engine\tempGLext.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4149008D-B58D-46FA-8FA6-EAAA9B5AE6CA}</ProjectGuid>

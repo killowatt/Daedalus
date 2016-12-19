@@ -11,7 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\source\renderer\GL\DaedalusGL.cpp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
     <ClCompile Include="..\..\..\source\renderer\Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\renderer\GL\DaedalusGL.h" />
+    <ClInclude Include="..\..\..\source\renderer\GL\GLDefinitions.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{554299EE-6A1C-4329-BFFD-6FA053AA7CBD}</ProjectGuid>
@@ -59,6 +66,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)source\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -71,6 +79,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)source\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

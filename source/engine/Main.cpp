@@ -1,11 +1,18 @@
-#include <iostream>
+﻿#include <iostream>
 
-#include "Platform/Windows/Window.h"
+#include "Platform/Windows/WindowWin32.h"
 
 int main()
 {
 	std::cout << "Hello!";
-	Window window;
-	window.DoStuff();
+
+	//WindowWin32 window(u8"Hello你好مرحباこんにちは");
+	Window window(u8"Hello你好مرحباこんにちは");
+
+	while (true)
+	{
+		window.Update();
+	}
+
 	std::getchar();
 }

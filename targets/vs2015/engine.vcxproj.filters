@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{e5375dd2-be05-4da5-94f9-98e32f3cf003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{6d0e478c-644e-49e5-a949-c9d1017c5bd4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\engine\platform\windows\WindowWin32.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\Engine\Main.cpp" />
+    <ClCompile Include="..\..\source\Engine\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\engine\Window.h" />
+    <ClInclude Include="..\..\source\engine\platform\windows\WindowWin32.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\Engine\Core.h" />
+  </ItemGroup>
+</Project>

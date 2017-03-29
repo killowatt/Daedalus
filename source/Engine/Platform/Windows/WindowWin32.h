@@ -9,10 +9,7 @@ class WindowWin32 : public SystemWindow
 	HWND handle;
 
 public:
-
-
 	void Update();
 
-	//WindowWin32();
-	WindowWin32(const char* title);
+	WindowWin32(const char* title, int width, int height);
 };

@@ -10,11 +10,18 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\Renderer\OpenGL\DaedalusGL.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\Renderer\OpenGL\DaedalusGL.h" />
+    <ClInclude Include="..\..\source\Renderer\OpenGL\GlobalFunctions.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B59BE6F0-36C9-46A4-B59A-9CBA1CA501D4}</ProjectGuid>
+    <ProjectGuid>{123693CB-1E94-4F0C-B4D3-D84020D709C4}</ProjectGuid>
     <RootNamespace>engine</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>Engine</ProjectName>
+    <ProjectName>Renderer</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -74,16 +81,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\source\Engine\Main.cpp" />
-    <ClCompile Include="..\..\source\engine\platform\windows\WindowWin32.cpp" />
-    <ClCompile Include="..\..\source\Engine\Window.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\source\Engine\Core.h" />
-    <ClInclude Include="..\..\source\engine\platform\windows\WindowWin32.h" />
-    <ClInclude Include="..\..\source\engine\Window.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

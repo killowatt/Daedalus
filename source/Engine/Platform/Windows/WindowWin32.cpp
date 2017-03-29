@@ -24,8 +24,7 @@ void WindowWin32::Update()
 	DispatchMessage(&msg);
 }
 
-//WindowWin32::WindowWin32() : WindowWin32("Standard Title") {}
-WindowWin32::WindowWin32(const char* title)
+WindowWin32::WindowWin32(const char* title, int width, int height) // TODO: this impl sucks
 {
 	instance = GetModuleHandle(0);
 
@@ -50,7 +49,7 @@ WindowWin32::WindowWin32(const char* title)
 		wideTitle,
 		WS_OVERLAPPEDWINDOW ^ WS_THICKFRAME ^ WS_MAXIMIZEBOX,
 		CW_USEDEFAULT, CW_USEDEFAULT,
-		1024, 576,
+		width, height,
 		NULL,
 		NULL,
 		instance,

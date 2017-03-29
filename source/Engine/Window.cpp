@@ -1,13 +1,12 @@
 #include "Window.h"
 
-#ifdef DAEDALUS_PLATFORM_WINDOWS
+#ifdef PLATFORM_WINDOWS
 #include "Platform/Windows/WindowWin32.h"
 typedef WindowWin32 PlatformWindow;
+#elif PLATFORM_MACOS
+#include "Platform/MacOS/WindowMacOS.h"
+typedef WindowMacOS PlatformWindow; // TODO: this is just an example
 #endif
-
-SystemWindow::SystemWindow()
-{
-}
 
 // Window
 void Window::Update()
@@ -16,10 +15,10 @@ void Window::Update()
 		platformWindow->Update();
 }
 
-Window::Window() : Window("Daedalus") {}
-Window::Window(const char* title)
+Window::Window() : Window("Daedalus", 1280, 720) {}
+Window::Window(const char* title, int32 width, int32 height)
 {
-	platformWindow = new PlatformWindow(title);
+	platformWindow = new PlatformWindow(title, width, height);
 }
 Window::~Window()
 {

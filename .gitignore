@@ -4,7 +4,8 @@
 binaries/
 temp/
 
-# Misc Files
+# Visual Studio Specific Files
+.vs/
 *.sdf
 *.opensdf
 *.opendb
@@ -18,3 +19,4 @@ temp/
 
 # NSight User Files
 *.nvuser
+

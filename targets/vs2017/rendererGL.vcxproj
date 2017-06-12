@@ -45,12 +45,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)binaries\</OutDir>
-    <IntDir>$(SolutionDir)temp\vs2017\$(ProjectName)</IntDir>
+    <IntDir>$(SolutionDir)temp\vs2017\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)_$(Platform)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)binaries\</OutDir>
-    <IntDir>$(SolutionDir)temp\vs2017\$(ProjectName)</IntDir>
+    <IntDir>$(SolutionDir)temp\vs2017\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)_$(Platform)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

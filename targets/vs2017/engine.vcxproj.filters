@@ -2,8 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="..\..\source\engine\Engine.h" />
+    <ClInclude Include="..\..\source\engine\Platform\Window.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\engine\Platform\Windows\WindowWin32.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\engine\Source.cpp" />
+    <ClCompile Include="..\..\source\engine\Platform\Window.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\engine\Platform\Windows\WindowWin32.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{76ce0003-b7ce-4ac2-bc56-2fb487207878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{93326eb8-5330-4df0-aa19-9e91b7f32e32}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
